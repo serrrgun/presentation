@@ -1,0 +1,11 @@
+@import '../../node_modules/reveal.js/css/reveal.css';
+@import '../../node_modules/reveal.js/css/theme/moon.css';
+@import '../../node_modules/reveal.js/lib/css/monokai.css';
+
+@import './global.scss';
+
+// slides
+
+@import './slides/slide-2.scss';
+@import './slides/slide-3.scss';
+@import './slides/slide-14.scss';

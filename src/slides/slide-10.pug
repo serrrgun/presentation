@@ -1,0 +1,42 @@
+section(data-background="images/bg.jpg")
+    h2 Component - Template
+    section
+        h3 Conditional rendering
+        pre
+            code.hljs(data-trim data-line-numbers='1-8')
+                |<div class="product__purchse-button-wrapper">
+                |    &lt;button v-if="quantity > 0" 
+                |        @:click="handelAddCard" 
+                |        class="product__purchse-button"&gt;Buy</button>
+                |    &lt;button v-else 
+                |        @:click="handelAddPreorder" 
+                |        class="product__purchse-button"&gt;Preorder</button>
+                |</div>
+    section
+        h3 Soft Conditional rendering
+        pre
+            code.hljs(data-trim data-line-numbers='2,5')
+                |<div class="product__purchse-button-wrapper">
+                |    &lt;button v-show="quantity > 0" 
+                |        @:click="handelAddCard" 
+                |        class="product__purchse-button"&gt;Buy</button>
+                |    &lt;button v-show="quantity === 0" 
+                |        @:click="handelAddPreorder" 
+                |        class="product__purchse-button"&gt;Preorder</button>
+                |</div>
+    section
+        h3 Regular JS Expressions
+        pre
+            code.hljs(data-trim data-line-numbers='1')
+                |<div :class="discount ? 'product__price product__price--discount' : 'product__price'">
+                |   {{ price }}
+                |</div>
+        h3 Map definition
+        pre
+            code.hljs(data-trim data-line-numbers='1')
+                |<div :class="{ 'product__price--discount' : discount }" class="product__price">
+                |   {{ price }}
+                |</div>
+    aside.notes 1. This is actually conditional rendering. If there is some local state in the component, then we can draw or not draw any element.
+                | 2. In the first case, we do not draw the node in the DOM tree at all. In this case, we draw, but they have display: none by default.
+                | 3. This is an example of how we can change classes. Or js expression, an ordinary ternary operator. Or you can use such a map.

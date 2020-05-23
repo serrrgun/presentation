@@ -1,0 +1,11 @@
+section(data-background="images/bg.jpg")
+    h2 App Mounting
+    section
+        include sub-sllides/code-1.html
+    section 
+        include sub-sllides/code-2.html
+    section 
+        include sub-sllides/code-3.html
+    aside.notes 1. This is the root instance of any Vue.js application. We just import Vue from Vue. We make new Vue, mount some div with id app in it. Vue is going to webpack. But more often they use Vue CLI - command line intarface, which allows you to create a new project, assemble a config, etc.
+                | 2. This is what the HTML Vue application looks like. Just id app. <App /> and inside <App /> we already mount the components.
+                | 3. Theoretically, of course, you can. If we immediately put components in the div id = app, some reactive data that we would like to use will work too. But most likely we will not do that.

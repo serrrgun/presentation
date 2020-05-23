@@ -1,0 +1,21 @@
+<pre><code class='hljs' data-trim data-line-numbers=''>
+    <template>
+        <div class="child-component">
+            <input v-on:input="handelInput" v-bind:value="value" type="text">
+        </div>
+    </template>
+
+    <script>
+        export default {
+            name: 'Child',
+            props: {
+                name: String,
+            },
+            methods: {
+                handelInput(evt) {
+                    this.$emit('nameChange', e.target.value);
+                },
+            },
+        }
+    </script>
+</code></pre>

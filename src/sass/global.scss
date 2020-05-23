@@ -1,0 +1,25 @@
+.reveal pre {
+    width: 100%;
+    font-size: 0.4em;
+
+    code {
+        max-height: none;
+    }
+}
+
+.reveal {
+    h2, h3 {
+        color: #5e5a4f;
+        text-transform: none;
+    }
+    h3 {
+        text-align: left;
+        font-weight: normal;
+    }
+    p {
+        color: #3a3113;
+    }
+    li {
+        color: #3a3113;
+    }
+}

@@ -1,0 +1,11 @@
+.slide-2 {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: 48%;
+            color: #3a3113;
+        }
+    }
+}

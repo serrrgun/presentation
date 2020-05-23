@@ -1,0 +1,24 @@
+section(data-background="images/bg.jpg")
+    h2 Component - Event modifiers
+    section
+        pre
+            code.hljs(data-trim data-line-numbers='1,2,4')
+                |<!-- prevent default -->
+                |<a @click.prevent="subscribeToUpdates" href="#">Subscribe</a>
+                |
+                |<form @summit.prevent="submitForm">
+                |    <input :value="profileForm.name" type="text" name="firstName">
+                |    <button type="button" name="button">Button</button>
+                |</form>
+    section
+        pre
+            code.hljs(data-trim data-line-numbers='1,4')
+                |<!-- stopPropagation -->
+                |<div @click="openProductPage">
+                |    <!-- *** -->
+                |    <div @click.stop="addToFavorites" class="product__card">
+                |        More info
+                |    </div>
+                |</div>
+    aside.notes 1. Well, the funniest thing about template is event modifier. Such a modifier as prevent allows you to call this event, Vue itself will substitute the default behavior. On forms, if necessary, prevent.
+                | 2. Stop is the stopPropagation modifier. You can combine, for example, stop.prevent.

@@ -1,0 +1,28 @@
+<pre><code class='hljs' data-trim data-line-numbers=''>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="app"&gt;
+            &lt;App&gt;
+                <AppHeader/>
+                <AppContent>
+                    <SideBar/>
+                    <ContentBlock>
+                        <h1>{{ content.welcome }}</h1>
+                        <p>{{ contenst.description }}</p>
+                        <button v-on:click="subscribeToUpdates">
+                            Subscribe to our updates
+                        </button>
+                    </ContentBlock>
+                </AppContent>
+            &lt;/App&gt;    
+        &lt;/div&gt;
+        &lt;script src="js/mai.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>

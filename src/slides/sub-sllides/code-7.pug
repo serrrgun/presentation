@@ -1,0 +1,24 @@
+pre
+    code.hljs(data-trim data-line-numbers='5-6,13-14,16-17')
+        |<template>
+        |   <div class="product">
+        |        <div class="product__content">
+        |            <div class="product__image-wrapper">
+        |                &lt;img    :src="image" 
+        |                        :alt="${name} product image"
+        |                        class="product__image"&gt;
+        |            </div>
+        |            <div class="product__name">{{ name }}</div>
+        |            <div class="product__price">{{ price }}</div>
+        |            <div class="product__quantity">{{ quantity }}</div>
+        |            <div class="product__purchse-button-wrapper">
+        |                &lt;button v-if="quantity > 0" 
+        |                        @:click="handelAddCard" 
+        |                        class="product__purchse-button"&gt;Buy</button>
+        |                &lt;button v-else 
+        |                        @:click="handelAddCard" 
+        |                        class="product__purchse-button"&gt;Preorder</button>
+        |            </div>
+        |        </div>
+        |    </div>
+        |</template>

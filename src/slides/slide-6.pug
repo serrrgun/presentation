@@ -1,0 +1,14 @@
+section(data-background="images/bg.jpg")
+    section
+        h2 Parent Child Relationships
+    section
+        image(src='images/emit-events.png')
+    section
+        h2 Parent-Child Relationships
+        include sub-sllides/code-8.pug    
+    section
+        h2 Parent-Child Relationships
+        include sub-sllides/code-4.html
+    aside.notes 1. And it is important that a lot revolves around the relationship of the parent and the child component. Vue.js due to single threaded data. We make sure that the parent transfers some data to the child, and the child informs the parent about what the parent needs to do.
+                | 2. This is the parent component and it has a Child and, at some event, calls the handelNameChange method and gives props name.
+                | 3. This is a child component. It will receive name props, display it in input, and when some action happens on this input, just a native event, it will call handleInput, which will do this. $ Emit, will issue a custom event.

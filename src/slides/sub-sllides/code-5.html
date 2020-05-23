@@ -1,0 +1,32 @@
+<pre><code class='hljs' data-trim data-line-numbers=''>
+    <template>
+        <div class="product">
+            <div class="product__content">
+                <div class="product__image-wrapper">
+                    <img    :src="image" 
+                            :alt="${name} product image"
+                            :class="product__image">
+                </div>
+                <div class="product__name">{{ name }}</div>
+                <div class="product__price">{{ price }}</div>
+            </div>
+            <input v-on:input="handelInput" v-bind:value="value" type="text">
+        </div>
+    </template>
+
+    <script>
+        export default {
+            name: 'ProductCard',
+            props: {
+                id: [String, Number],
+                name: String,
+                price: Number,
+                image: String,
+            },
+        };
+    </script>
+
+    <style lang="scss" scoped>
+        /* here yuor css */
+    </style>
+</code></pre>

@@ -1,0 +1,52 @@
+section(data-background="images/bg.jpg")
+    h2 Component - List rendering
+    section
+        pre
+            code.hljs(data-trim data-line-numbers='4-26')
+                |export default {
+                |    data() {
+                |        return {
+                |            products: [
+                |                {
+                |                    currency: 'USD',
+                |                    id: 1,
+                |                    name: 'Blue Shoes',
+                |                    price: 1400,
+                |                    image: 'images/blue-shoes.png',
+                |                }
+                |                {
+                |                    currency: 'USD',
+                |                    id: 2,
+                |                    name: 'Black Shoes',
+                |                    price: 1600,
+                |                    image: 'images/black-shoes.png',
+                |                }
+                |                {
+                |                    currency: 'EUR',
+                |                    id: 3,
+                |                    name: 'Yellow Shoes',
+                |                    price: 1800,
+                |                    image: 'images/yellow-shoes.png',
+                |                }
+                |            ]
+                |        }
+                |    }
+                |}
+    section
+        pre
+            code.hljs(data-trim data-line-numbers='3-4|6-10')
+                |<template>
+                |    <div class="products">
+                |        &lt;div v-for="(products, index) in products"
+                |             :key="index"
+                |            class="products__card-wrapper"&gt;
+                |            &lt;ProductCard
+                |                :id="product.id"
+                |                :image="product.image"
+                |                :name="product.name"
+                |                :price="product.price"/&gt;
+                |        </div>
+                |    </div>
+                |</template>
+    aside.notes 1. Let's move on to another very important directive. In no application, we can do without cycles. And let's try to see how we will render such a list of products.
+                | 2. There is a v-for directive for this. In fact, a loop through an array, through objects, works too. Here we have each element of the array, here is the index, the index is needed for each element. Well, for each element we pass props.
